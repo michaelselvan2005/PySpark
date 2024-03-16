@@ -17,3 +17,5 @@ df.createOrReplaceTempView("people")
 result =spark.sql("select * from people")
 
 result.show()
+
+result.write.mode("overwrite").csv("outputfile.csv")
